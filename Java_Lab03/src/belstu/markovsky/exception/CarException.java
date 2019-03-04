@@ -1,12 +1,11 @@
 package belstu.markovsky.exception;
 
-public class CarExeption extends Exception {
+public class CarException extends Exception {
 
-    public CarExeption() {
+    public CarException() {
         super();
     }
-
-    public CarExeption(String message) {
+    public CarException(String message) {
         super(message);
     }
 }
