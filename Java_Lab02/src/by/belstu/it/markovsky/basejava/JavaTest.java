@@ -179,12 +179,12 @@ public static void main(String[] args) {
         WrapperString wrapperString = new WrapperString("string") {
             public void replace (char oldChar, char newChar)
             {
-                System.out.println("replace method");
+                System.out.println("new replace method");
             }
 
             public void delete (char newChar)
             {
-                System.out.println("delete method");
+                System.out.println("new delete method");
             }
         };
     }
