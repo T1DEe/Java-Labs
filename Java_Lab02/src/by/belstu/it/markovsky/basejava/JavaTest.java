@@ -166,26 +166,10 @@ public static void main(String[] args) {
         boolean comRez = c2 == c3;
         c2 = c3;
         System.out.println(comRez);
-        for (char[] chr :
-                c2) {
-            for (char c :
-                    chr) {
-                System.out.print(c+" ");
+        for (char[] chr : c2) {
+            for (char c : chr) {
+                System.out.print(c + " ");
             }
         }
-
-    // TASK H =======================================================================================
-
-        WrapperString wrapperString = new WrapperString("string") {
-            public void replace (char oldChar, char newChar)
-            {
-                System.out.println("new replace method");
-            }
-
-            public void delete (char newChar)
-            {
-                System.out.println("new delete method");
-            }
-        };
     }
 }

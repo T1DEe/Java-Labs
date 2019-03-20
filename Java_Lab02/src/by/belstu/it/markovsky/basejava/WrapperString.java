@@ -40,6 +40,11 @@ public class WrapperString {
 
     public void replace (char oldChar, char newChar)
     {
-        System.out.println("replace method");
+        str = str.replace(oldChar, newChar);
+    }
+
+    public void delete (char newChar)
+    {
+        str = str.replace(newChar, '\u0000');
     }
 }

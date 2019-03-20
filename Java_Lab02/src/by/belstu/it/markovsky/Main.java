@@ -2,6 +2,7 @@ package by.belstu.it.markovsky;
 
 import by.belstu.it.markovsky.TextFunction;
 import by.belstu.it.markovsky.basejava.JavaTest;
+import by.belstu.it.markovsky.basejava.WrapperString;
 
 public class Main {
 
@@ -11,5 +12,14 @@ public class Main {
 
         TextFunction obj = new TextFunction();
         obj.getValue();
+
+        WrapperString wrapperString = new WrapperString("string");
+
+        wrapperString.replace('s', 'r');
+        System.out.println(wrapperString.getStr());
+
+        wrapperString.delete('t');
+        System.out.println(wrapperString.getStr());
+
     }
 }
