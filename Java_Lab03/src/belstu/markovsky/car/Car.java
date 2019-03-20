@@ -27,7 +27,7 @@ public abstract class Car implements Comparable<Car> {
     }
 
     private void setLength(int length) throws CarException {
-        if (length < 500 )
+        if (length < 100 )
             throw new CarException("Length can't be less than 500 st.");
         this.length = length;
     }
@@ -104,11 +104,6 @@ public abstract class Car implements Comparable<Car> {
 
     @Override
     public int compareTo(Car o) {
-        if (this.fuelConsum > o.fuelConsum)
-            return 1;
-        if (this.fuelConsum < o.fuelConsum)
-            return -1;
-
-        return 0;
+        return Integer.compare(this.fuelConsum, o.fuelConsum);
     }
 }
