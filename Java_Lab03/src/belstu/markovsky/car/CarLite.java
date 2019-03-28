@@ -3,7 +3,9 @@ package belstu.markovsky.car;
 import belstu.markovsky.enums.WheelDrive;
 import belstu.markovsky.exception.CarException;
 
-public class CarLite extends Car {
+import java.io.Serializable;
+
+public class CarLite extends Car implements Serializable {
 
     // ==========================================================================
 

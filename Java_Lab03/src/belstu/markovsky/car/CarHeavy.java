@@ -3,7 +3,9 @@ package belstu.markovsky.car;
 import belstu.markovsky.enums.WheelDrive;
 import belstu.markovsky.exception.CarException;
 
-public class CarHeavy extends Car {
+import java.io.Serializable;
+
+public class CarHeavy extends Car implements Serializable {
 
     // ==========================================================================
 

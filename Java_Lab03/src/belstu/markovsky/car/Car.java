@@ -101,6 +101,13 @@ public abstract class Car implements Comparable<Car> {
 
     // ==========================================================================
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "manufacturer = '" + manufacturer + '\'' +
+                ", price = " + price +
+                '}';
+    }
 
     @Override
     public int compareTo(Car o) {

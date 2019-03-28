@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type= "text/xsl" version="2.0" href = "air.xsl"?>
+<?xml-stylesheet type= "text/xsl" version="2.0" href = "car.xsl"?>
 <arrayCar  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="car.xsd">
-    <CarHeavy>
-        <manufacturer>Volvo</manufacturer>
-        <length>800</length>
-        <weight>5500</weight>
-        <wheelDrive>1</wheelDrive>
-        <maxSpeed>150</maxSpeed>
-        <fuelConsum>32</fuelConsum>
-        <price>35000</price>
-        <capacity>10</capacity>
-    </CarHeavy>
     <CarLight>
         <manufacturer>Mercedes Benz</manufacturer>
         <length>500</length>
-        <weight>3</weight>
+        <weight>3000</weight>
         <wheelDrive>2</wheelDrive>
         <maxSpeed>220</maxSpeed>
         <fuelConsum>20</fuelConsum>
