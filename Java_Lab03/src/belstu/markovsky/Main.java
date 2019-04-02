@@ -32,23 +32,23 @@ public class Main {
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 
 //        LOG.info("Program start...");
-//
-//        ManagerTaxiPark manager = new ManagerTaxiPark("Henry", 4);
-//        ParkTaxi park = new ParkTaxi(manager);
-//
-//
-//        List<Car> auto = new ArrayList<>();
-//        try {
-//            auto.add(new CarHeavy());
-//            auto.add(new CarLite("Volvo", 3000, 2000, WheelDrive.BACK_DRIVE, 230, 15, 35000, 5));
-//        }
-//        catch (CarException exc) {
-//            System.out.println(exc.getMessage());
-//        }
-//        park.setAutoPark(auto);
-//
-//
-//
+
+        ManagerTaxiPark manager = new ManagerTaxiPark("Henry", 4);
+        ParkTaxi park = new ParkTaxi(manager);
+
+
+        List<Car> auto = new ArrayList<>();
+        auto.add(new CarLite("Volvo", 3000, 2000, WheelDrive.BACK_DRIVE,
+                                                230, 15, 35000, 5));
+        auto.add(new CarHeavy());
+        park.setAutoPark(auto);
+
+        List<Car> newList = manager.sortParkByFuelConsum(auto);
+        for (Car item : newList) {
+            System.out.println(item);
+        }
+
+
 //        Scanner in = new Scanner(System.in);
 //        System.out.print("Input a max speed: ");
 //        int num = in.nextInt();
@@ -59,20 +59,20 @@ public class Main {
 //        }
 
 
-        SAXParserFactory factory = SAXParserFactory.newInstance();
-        SAXParser parser = factory.newSAXParser();
-
-        SaxParser.AdvancedXMLHandler handler = new SaxParser.AdvancedXMLHandler();
-        parser.parse(new File("files/car.xml"), handler);
-
-        for (Car item : SaxParser.cars)
-            System.out.println(item.toString());
+//        SAXParserFactory factory = SAXParserFactory.newInstance();
+//        SAXParser parser = factory.newSAXParser();
+//
+//        SaxParser.AdvancedXMLHandler handler = new SaxParser.AdvancedXMLHandler();
+//        parser.parse(new File("files/car.xml"), handler);
+//
+//        for (Car item : SaxParser.cars)
+//            System.out.println(item.toString());
 
 
 
 //        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("car.dat")))
 //        {
-//            CarLite car = new CarLite("Volvo", 3000, 2, WheelDrive.BACK_DRIVE, 230, 15, 35000, 5);
+//            CarLite car = new CarLite("N/A", 3000, 2, WheelDrive.BACK_DRIVE, 230, 15, 35000, 5);
 //            oos.writeObject(car);
 //        }
 //        catch(Exception ex){

@@ -19,7 +19,7 @@ public class CarLite extends Car implements Serializable {
     }
 
     public CarLite(String manufacturer, int length, int weight, WheelDrive wheelDrive,
-                   int maxSpeed, int fuelConsum, int price,  int seatPlaces) throws CarException {
+                   int maxSpeed, int fuelConsum, int price,  int seatPlaces) {
 
         super(manufacturer, length, weight, wheelDrive, maxSpeed, fuelConsum, price);
         this.seatingPlaces = seatPlaces;
@@ -31,19 +31,19 @@ public class CarLite extends Car implements Serializable {
         return seatingPlaces;
     }
 
-    private void setSeatingPlaces(int seatingPlaces) throws CarException{
+    private void setSeatingPlaces(int seatingPlaces) {
         if (seatingPlaces < 0 || seatingPlaces > 9 )
-            throw new CarException("Seating places can't be less than 0 and more than 9");
-        this.seatingPlaces = seatingPlaces;
+            this.seatingPlaces = 2;
+        else
+            this.seatingPlaces = seatingPlaces;
     }
 
     @Override
-    public void setWeight(int weight) throws CarException {
-        if (weight > 3500) {
-            throw new CarException("Weight of lite car can't be more than 3500 kg.");
-        } else {
+    public void setWeight(int weight) {
+        if (weight < 3500)
             super.setWeight(weight);
-        }
+        else
+            super.setWeight(3500);
     }
 
     // ==========================================================================

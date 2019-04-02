@@ -21,58 +21,57 @@ public abstract class Car implements Comparable<Car> {
     public String getManufacturer() {
         return manufacturer;
     }
-
     public int getLength() {
         return length;
     }
-
-    private void setLength(int length) throws CarException {
-        if (length < 100 )
-            throw new CarException("Length can't be less than 500 st.");
-        this.length = length;
-    }
-
     public int getWeight() {
         return weight;
     }
-
-    public void setWeight(int weight) throws CarException {
-        if (weight < 0 )
-            throw new CarException("Weight can't be less than 0 kg.");
-        this.weight = weight;
-    }
-
     public int getMaxSpeed() {
         return maxSpeed;
     }
-
-    private void setMaxSpeed(int maxSpeed) throws CarException {
-        if (maxSpeed < 0 )
-            throw new CarException("Max Speed can't be less than 0 km/h");
-        this.maxSpeed = maxSpeed;
-    }
-
     public WheelDrive getWheelDrive() {
         return wheelDrive;
     }
-
+    public int getPrice() {
+        return price;
+    }
     public int getFuelConsum() {
         return fuelConsum;
     }
 
-    private void setFuelConsum(int fuelConsum) throws CarException {
+
+    private void setLength(int length) {
+        if (length < 100 )
+            this.length = 100;
+        else
+            this.length = length;
+    }
+
+    public void setWeight(int weight) {
+        if (weight < 0 )
+            this.weight = 1000;
+        else
+            this.weight = weight;
+    }
+
+    private void setMaxSpeed(int maxSpeed) {
+        if (maxSpeed < 0 )
+            this.maxSpeed = 30;
+        else
+            this.maxSpeed = maxSpeed;
+    }
+
+    private void setFuelConsum(int fuelConsum) {
         if (fuelConsum < 0 )
-            throw new CarException("Fuel consumption can't be less than 0.");
-        this.fuelConsum = fuelConsum;
+            this.fuelConsum = 7;
+        else
+            this.fuelConsum = fuelConsum;
     }
 
-    public int getPrice() {
-        return price;
-    }
-
-    private void setPrice(int price) throws CarException {
+    private void setPrice(int price) {
         if (price < 0 )
-            throw new CarException("Price can't be less than 0.");
+            this.price = 500;
         this.price = price;
     }
 
@@ -89,7 +88,7 @@ public abstract class Car implements Comparable<Car> {
     }
 
     public Car(String manufacturer, int length, int weight, WheelDrive wheelDrive,
-               int maxSpeed, int fuelConsum, int price) throws CarException {
+               int maxSpeed, int fuelConsum, int price) {
         this.manufacturer = manufacturer;
         setLength(length);
         setWeight(weight);

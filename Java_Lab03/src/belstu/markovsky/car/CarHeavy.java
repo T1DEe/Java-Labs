@@ -20,6 +20,7 @@ public class CarHeavy extends Car implements Serializable {
 
     public CarHeavy(String manufacturer, int length, int weight, WheelDrive wheelDrive,
                     int maxSpeed, int fuelConsum, int price, int capacity) throws CarException {
+
         super(manufacturer, length, weight, wheelDrive, maxSpeed, fuelConsum, price);
         this.capacity = capacity;
     }
@@ -30,18 +31,19 @@ public class CarHeavy extends Car implements Serializable {
         return capacity;
     }
 
-    private void setCapacity(int capacity) throws CarException{
+    private void setCapacity(int capacity) {
         if (capacity < 0 )
-            throw new CarException("Capacity can't be less than 0 kg.");
-        this.capacity = capacity;
+            this.capacity = 1;
+        else
+            this.capacity = capacity;
     }
 
     @Override
-    public void setWeight(int weight) throws CarException {
+    public void setWeight(int weight) {
         if (weight > 3500) {
             super.setWeight(weight);
         } else {
-            throw new CarException("Weight of heavy car can't be less than 3500 kg.");
+            super.setWeight(3501);
         }
     }
 
