@@ -16,7 +16,7 @@ import static org.junit.Assert.*;
 public class ManagerTaxiParkTest {
 
     @Test
-    public void countParkPrice() {
+    public void contParkPrice() {
         ManagerTaxiPark manager = new ManagerTaxiPark("Garry", 3);
         ParkTaxi park = new ParkTaxi(manager);
 
